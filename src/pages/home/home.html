@@ -1,18 +1,109 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title align="center">Rajshree Admin</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+  <h3 align="center">Cheque Details</h3>
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary" floating>Full Name</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" floating>Cheque Number</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Date</ion-label>
+      <ion-select (ionChange)="monthChange($event)">
+        <ion-option value="01" selected="true">January</ion-option>
+        <ion-option value="02">February</ion-option>
+        <ion-option value="03">March</ion-option>
+        <ion-option value="04">April</ion-option>
+        <ion-option value="05">May</ion-option>
+        <ion-option value="06">June</ion-option>
+        <ion-option value="07">July</ion-option>
+        <ion-option value="08">August</ion-option>
+        <ion-option value="09">September</ion-option>
+        <ion-option value="10">October</ion-option>
+        <ion-option value="11">November</ion-option>
+        <ion-option value="12">December</ion-option>
+      </ion-select>
+      <ion-select (ionChange)="yearChange($event)">
+        <ion-option selected="true">2019</ion-option>
+        <ion-option>2018</ion-option>
+        <ion-option>2017</ion-option>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Flat Number</ion-label>
+      <ion-select (ionChange)="monthChange($event)">
+        <ion-option value="A" selected="true">A- Wing</ion-option>
+        <ion-option value="B">B-Wing</ion-option>
+        <ion-option value="C">C-Wing</ion-option>
+      </ion-select>
+      <ion-select (ionChange)="yearChange($event)">
+        <ion-option selected="true">101</ion-option>
+        <ion-option>102</ion-option>
+        <ion-option>103</ion-option>
+        <ion-option>104</ion-option>
+        <ion-option>105</ion-option>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+        <ion-option>201</ion-option>
+        <ion-option>202</ion-option>
+        <ion-option>203</ion-option>
+        <ion-option>204</ion-option>
+        <ion-option>205</ion-option>
+
+        <ion-option>301</ion-option>
+        <ion-option>302</ion-option>
+        <ion-option>303</ion-option>
+        <ion-option>304</ion-option>
+        <ion-option>305</ion-option>
+
+        <ion-option>401</ion-option>
+        <ion-option>402</ion-option>
+        <ion-option>403</ion-option>
+        <ion-option>404</ion-option>
+        <ion-option>405</ion-option>
+
+        <ion-option>501</ion-option>
+        <ion-option>502</ion-option>
+        <ion-option>503</ion-option>
+        <ion-option>504</ion-option>
+        <ion-option>505</ion-option>
+
+        <ion-option>601</ion-option>
+        <ion-option>602</ion-option>
+        <ion-option>603</ion-option>
+        <ion-option>604</ion-option>
+        <ion-option>605</ion-option>
+
+        <ion-option>701</ion-option>
+        <ion-option>702</ion-option>
+        <ion-option>703</ion-option>
+        <ion-option>704</ion-option>
+        <ion-option>705</ion-option>
+
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-list align="center">
+    <button ion-button icon-start (click)="takePhoto()">
+      <ion-icon name="camera"></ion-icon>
+      Take Photo
+    </button>
+    <button ion-button icon-start>
+      <ion-icon name="camera"></ion-icon>
+      Submit
+    </button>
+  </ion-list>
+  <img src="{{myPhoto}}">
 </ion-content>
